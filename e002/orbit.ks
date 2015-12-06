@@ -26,6 +26,9 @@ WAIT UNTIL ALT:RADAR < 500. STAGE.
 
 // NOTE: This line doesn't work (though it was what was used in the video). The
 // altimeter is based on the center of the craft, so the program never detects
-// that the vessel has landed. Instead, try the following:
-// WAIT UNTIL ALT:RADAR < 10. WAIT 5. TOGGLE LIGHTS.
-WAIT UNTIL ALT:RADAR < 1. WAIT 1. TOGGLE LIGHTS.
+// that the vessel has landed.
+// WAIT UNTIL ALT:RADAR < 1. WAIT 1. TOGGLE LIGHTS.
+
+// Instead, try the following:
+WAIT UNTIL ALT:RADAR < 10. WAIT 5. TOGGLE LIGHTS.
+

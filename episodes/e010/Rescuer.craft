@@ -7025,7 +7025,7 @@ PART
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 7.5
+		amount = 0
 		maxAmount = 7.5
 		flowState = True
 		isTweakable = True
@@ -8047,7 +8047,7 @@ PART
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 7.5
+		amount = 0
 		maxAmount = 7.5
 		flowState = True
 		isTweakable = True

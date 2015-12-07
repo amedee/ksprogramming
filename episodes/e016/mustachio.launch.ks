@@ -54,6 +54,5 @@ TOGGLE PANELS.
 SET p TO SHIP:PARTSTITLED("Communotron 16")[0].
 SET m TO p:GETMODULE("ModuleRTAntenna").
 m:DOEVENT("Activate").
-m:SETFIELD("target", "active-vessel").
 
 NOTIFY("Launch Script Complete").

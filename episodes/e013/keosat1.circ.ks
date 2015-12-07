@@ -42,7 +42,7 @@ m:DOEVENT("Activate").
 m:SETFIELD("target", "Mun").
 
 // Enable reflectron
-SET p TO SHIP:PARTSTITLED("Reflectron KR-7")[1].
+SET p TO SHIP:PARTSTITLED("Reflectron KR-7")[0].
 SET m TO p:GETMODULE("ModuleRTAntenna").
 m:DOEVENT("Activate").
 m:SETFIELD("target", "active-vessel").

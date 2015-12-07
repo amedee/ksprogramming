@@ -4,12 +4,6 @@
 
 NOTIFY("Performing minor adjustments").
 
-// Enable reflectron
-SET p TO SHIP:PARTSTITLED("Reflectron KR-7")[0].
-SET m TO p:GETMODULE("ModuleRTAntenna").
-m:DOEVENT("Activate").
-m:SETFIELD("target", "active-vessel").
-
 // Finalize orbital period
 LOCK STEERING TO RETROGRADE.
 WAIT 10.

@@ -96,7 +96,7 @@ declare function PerformScienceExperiments {
   for theModule in scienceModules {
     if theModule:hasdata {
       print "Existing data found in " + theModule:part:title at (1,1).
-      if WaitForCharge(theModule:data[0]) {
+      if WaitForCharge(theModule:data[0]) and (theModule:data[0]:transmitvalue > 0.1) {
         TransmitScience(theModule).
       }
     }
@@ -105,17 +105,17 @@ declare function PerformScienceExperiments {
   for theModule in scienceModules {
     clearscreen.
     print "Working with: " + theModule:part:title at (1,1).
-    wait 1.
+    wait 0.1.
     if (not theModule:inoperable) and (theModule:rerunnable) and (not theModule:hasdata) {
       print "Collecting data                         " at (1,2).
       theModule:deploy().
       set starttime to time:seconds.
-      wait until (theModule:hasdata) or (time:seconds > starttime + 20).
-      if (theModule:HASDATA) and (WaitForCharge(theModule:data[0])) {
+      wait until (theModule:hasdata) or (time:seconds > starttime + 10).
+      if (theModule:HASDATA) and (WaitForCharge(theModule:data[0])) and (theModule:data[0]:transmitvalue > 0.1) {
         TransmitScience(theModule).
       }
     }
-    wait 1.
+    wait 0.1.
   }
   print "All data collection and transmission complete".
 }
